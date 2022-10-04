@@ -1,0 +1,125 @@
+﻿@model  WeatherForecast.Dto.MinimaMaximaDto
+<body style="background-image: url('https://img.olhardigital.com.br/wp-content/uploads/2021/09/nuvem-nimbus.jpg'); background-size: 100%">
+    <div class="row">
+        <div class="card green">
+            <h2>Cidades mais quentes hoje.</h2>
+            <table style="font-size:large; color:black">
+                <thead>
+                    <tr class="col-lg-12">
+                        <th class="col-lg-10">
+                            Cidade
+                        </th>
+                        <th class="left col-lg-2">
+                            Máxima
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Maxima)
+                    {
+                        <tr class="col-lg-12">
+                            <td class="col-lg-10" onclick="showClimaTempo(@item.Id)">
+                                <a style="font-size:large; color:black">@Html.DisplayFor(modelItem => item.Cidade)/@Html.DisplayFor(modelItem => item.UF)</a>
+                            </td>
+                            <td class="left col-lg-2" onclick="showClimaTempo(@item.Id)">
+                                <a style="font-size:large; color:black">@Html.DisplayFor(modelItem => item.TemperaturaMaxima)C°</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="card blue">
+                <h2>Cidades mais frias hoje.</h2>
+                <table style="font-size:large; color:black">
+                    <thead>
+                        <tr class="col-lg-12">
+                            <th class="col-lg-10">
+                                Cidade
+                            </th>
+                            <th class="left col-lg-2">
+                                Mínima
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Minima)
+                        {
+                            <tr class="col-lg-12">
+                                <td class="col-lg-11" onclick="showClimaTempo(@item.Id)">
+                                    <a style="font-size:large; color:black">@Html.DisplayFor(modelItem => item.Cidade)/@Html.DisplayFor(modelItem => item.UF)</a>
+                                </td>
+                                <td class="left col-lg-1" onclick="showClimaTempo(@item.Id)">
+                                    <a style="font-size:large; color:black">@Html.DisplayFor(modelItem => item.TemperaturaMinima)C°</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="dia" class="cl" style="display: none">
+        <div>
+            <p style="font-size: x-large" id="cidade">
+        </div>
+        <div class="row">
+            <div id="card1" class="card2 green">
+                <p style="font-size: large; text-align:center; color: black" id="diaMes1">
+                <p style="font-size: large; color: black" id="dia1">
+                <p style="font-size: small; color:black" id="clima1">
+                <p style="font-size: small; color:black" id="maxima1">
+                <p style="font-size: small; color:black" id="minima1">
+            </div>
+
+            <div id="card2" class="card2 blue">
+                <p style="font-size: large; text-align: center; color: black" id="diaMes2">
+                <p style="font-size: large; color:black" id="dia2">
+                <p style="font-size: small; color:black" id="clima2">
+                <p style="font-size: small; color:black" id="maxima2">
+                <p style="font-size: small; color:black" id="minima2">
+            </div>
+
+            <div id="card3" class="card2 red">
+                <p style="font-size: large; text-align: center; color: black" id="diaMes3">
+                <p style="font-size: large; color:black" id="dia3">
+                <p style="font-size: small; color:black" id="clima3">
+                <p style="font-size: small; color:black" id="maxima3">
+                <p style="font-size: small; color:black" id="minima3">
+            </div>
+
+            <div id="card4" class="card2 red">
+                <p style="font-size: large; text-align: center; color: black" id="diaMes4">
+                <p style="font-size: large; color:black" id="dia4">
+                <p style="font-size: small; color:black" id="clima4">
+                <p style="font-size: small; color:black" id="maxima4">
+                <p style="font-size: small; color:black" id="minima4">
+            </div>
+            <div id="card5" class="card2 green">
+                <p style="font-size: large; text-align: center; color: black" id="diaMes5">
+                <p style="font-size: large; color:black" id="dia5">
+                <p style="font-size: small; color:black" id="clima5">
+                <p style="font-size: small; color:black" id="maxima5">
+                <p style="font-size: small; color:black" id="minima5">
+            </div>
+
+            <div id="card6" class="card2 blue">
+                <p style="font-size: large; text-align: center; color: black" id="diaMes6">
+                <p style="font-size: large; color:black" id="dia6">
+                <p style="font-size: small; color:black" id="clima6">
+                <p style="font-size: small; color:black" id="maxima6">
+                <p style="font-size: small; color:black" id="minima6">
+            </div>
+
+            <div id="card7" class="card2 red">
+                <p style="font-size: large; text-align: center; color: black" id="diaMes7">
+                <p style="font-size: large; color:black" id="dia7">
+                <p style="font-size: small; color:black" id="clima7">
+                <p style="font-size: small; color:black" id="maxima7">
+                <p style="font-size: small; color:black" id="minima7">
+            </div>
+        </div> 
+    </div>
+</body>

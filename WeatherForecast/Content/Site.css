@@ -1,0 +1,109 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image:src(../Views/img/tempo.jpg);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fafafa;
+    background-image: src("../Views/img/tempo.jpg");
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 500px;
+    transition: all 0.3s ease-out;
+    background-image: url("tempo.jpg");
+}
+
+.card2 {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    transition: all 0.3s ease-out;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+    }
+
+    .card p {
+        color: #a3a5ae;
+        font-size: 16px;
+    }
+
+    .card2:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+    }
+
+    .card2 p {
+        color: #a3a5ae;
+        font-size: 16px;
+    }
+
+.image {
+    float: right;
+    max-width: 64px;
+    max-height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+}
+
+.blue {
+    border-left: 3px solid #4895ff;
+}
+
+.green {
+    border-left: 3px solid #3bb54a;
+}
+
+.red {
+    border-left: 3px solid #b3404a;
+}
+
+.left{
+    text-align: end;
+}
+
+.right{
+    text-align: start;
+}
+
